@@ -143,3 +143,10 @@ bool Time::operator>(Time& right)
 					return true;
 	return false;
 }
+bool Time::operator==(Time& right)
+{
+	return days == right.days &&
+		hours == right.hours &&
+		minutes == right.minutes &&
+		seconds == right.seconds;
+}

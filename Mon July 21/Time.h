@@ -20,6 +20,8 @@ public:
 	friend std::ostream& operator<<(std::ostream& strm, Time& obj);
 	bool operator<(Time& right);
 	bool operator>(Time& right);
+	bool operator==(Time& right);
+
 	operator int();
 
 };
