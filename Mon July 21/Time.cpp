@@ -150,3 +150,29 @@ bool Time::operator==(Time& right)
 		minutes == right.minutes &&
 		seconds == right.seconds;
 }
+bool Time::operator<=(Time& right)
+{
+	if (this->hours == right.hours || this->hours < right.hours)
+		return true;
+	if (this->minutes == right.minutes || this->minutes < right.minutes)
+		return true;
+	if (this->seconds == right.seconds || this->seconds < right.seconds)
+		return true;
+	if (this->days == right.days || this->days < right.days)
+		return true;
+	else
+		return false;
+}
+bool Time::operator>=(Time& right)
+{
+	if (this->hours == right.hours || this->hours > right.hours)
+		return true;
+	if (this->minutes == right.minutes || this->minutes > right.minutes)
+		return true;
+	if (this->seconds == right.seconds || this->seconds > right.seconds)
+		return true;
+	if (this->days == right.days || this->days > right.days)
+		return true;
+	else
+		return false;
+}

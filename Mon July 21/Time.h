@@ -21,6 +21,8 @@ public:
 	bool operator<(Time& right);
 	bool operator>(Time& right);
 	bool operator==(Time& right);
+	bool operator<=(Time& right);
+	bool operator>=(Time& right);
 
 	operator int();
 
